@@ -1,5 +1,4 @@
 {
-  "parser": "php",
   "plugins": ["@prettier/plugin-php"],
   "braceStyle": "1tbs",
   "printWidth": 120
