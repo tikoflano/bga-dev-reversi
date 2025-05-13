@@ -42,32 +42,39 @@
            Consequently, don't hesitate to put as many comments as necessary.
 */
 
-
 /* Note: you must not use any @import directive */
-
 
 /********* You can start writing your CSS below this line: **********/
 
-
 #board {
-   width: 536px;
-   height: 528px;
-   background-image: url('img/board.jpg');
-   position: relative;
+  width: 536px;
+  height: 528px;
+  background-image: url("img/board.jpg");
+  position: relative;
 }
 
 .square {
-    width: 62px;
-    height: 62px;
-    position: absolute;
+  width: 62px;
+  height: 62px;
+  position: absolute;
 }
 
 .disc {
-    width: 56px;
-    height: 56px;
-    position: absolute;
-    background-image: url('img/tokens.png');
-    background-size: auto 100%;
+  width: 56px;
+  height: 56px;
+  position: absolute;
+  background-image: url("img/tokens.png");
+  background-size: auto 100%;
 }
-.disc[data-color="ffffff"] { background-position-x: 0%; }
-.disc[data-color="000000"] { background-position-x: 100%; }
+.disc[data-color="ffffff"] {
+  background-position-x: 0%;
+}
+.disc[data-color="000000"] {
+  background-position-x: 100%;
+}
+
+.possibleMove {
+  background-color: white;
+  opacity: 0.2;
+  cursor: pointer;
+}
