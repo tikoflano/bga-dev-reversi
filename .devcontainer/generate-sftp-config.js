@@ -1,7 +1,9 @@
 const fs = require("fs");
 
+const projectName = process.env.BGA_PROJECT_NAME || "mygame";
+
 const config = {
-  name: `BGA - ${process.env.BGA_PROJECT_NAME || ""}`,
+  name: `BGA - ${projectName}`,
   host: "1.studio.boardgamearena.com",
   protocol: "sftp",
   port: 2022,
@@ -11,20 +13,13 @@ const config = {
   useTempFile: false,
   openSsh: false,
   uploadOnSave: true,
-  ignore: [
-    ".vscode",
-    ".devcontainer",
-    "node_moduless",
-    ".git",
-    ".DS_Store",
-    "_ide_helper.php",
-  ],
+  ignore: [".vscode", ".devcontainer", "node_moduless", ".git", ".DS_Store", "_ide_helper.php"],
   syncOption: {
     skipCreate: false,
     delete: true,
   },
   watcher: {
-    files: "img/*",
+    files: `{img/*,${projectName}.*}`,
     autoUpload: true,
     autoDelete: true,
   },
